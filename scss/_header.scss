@@ -1,0 +1,54 @@
+.container_nav {
+    grid-area: nav;
+    padding: 1px;
+    .logo_ppal {
+        width: 90%;
+
+        img {
+            width: 90%;
+            margin: 10px;
+        }
+    }
+    .container_navbar {
+         padding: 1px;
+         width: 100%;
+
+
+            li {
+                margin: 30px 0px 30px 20px;
+                list-style-type: none;
+                letter-spacing: 1.5px;
+                padding: 1px;
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration:overline;
+                        color: orangered;
+                    }
+                    &:link {
+                        color: rgb(85, 112, 136);
+                    }
+                    &:visited {
+                        text-decoration: none;
+                        color: rgb(85, 112, 136);
+                    }
+                }
+            }
+        }
+        .navbar_redes {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+            margin-top: 50px;
+            padding: 1px;
+            .icono_redes {
+                width: 30px;
+                margin: 2px;
+            }
+        }
+
+        .navbar_search {
+            margin-top: 30px !important;
+            
+        }
+    }

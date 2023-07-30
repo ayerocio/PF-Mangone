@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "fuente_aye_doble";
+    src: url("../assets/fonts/ash_doble/AshDobleLinea-Regular.ttf");
+}
+
+@font-face {
+    font-family: "aye_myfont";
+    src: url("../assets/fonts/myfont//Myfont1-Regular.otf");
+}
+
+// * {
+//     @include reset;
+// }
+
+body {
+    height: 100%;
+    background-image: url(../assets/img/fondo_main.png);
+        .grid_body {
+            position: relative;
+            min-height: 150vh;
+            display: grid;
+            grid-template-columns: 15% auto;
+            grid-template-rows: 90% 10%;
+            grid-template-areas: 
+            "nav main"
+            "footer footer"
+            ;
+            gap: 5px;
+            padding-bottom: 50px;
+        }
+}
+

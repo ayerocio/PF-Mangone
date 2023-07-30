@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "fuente_aye_doble";
+  src: url("../assets/fonts/ash_doble/AshDobleLinea-Regular.ttf"); }
+
+@font-face {
+  font-family: "aye_myfont";
+  src: url("../assets/fonts/myfont//Myfont1-Regular.otf"); }
+
+body {
+  height: 100%;
+  background-image: url(../assets/img/fondo_main.png); }
+  body .grid_body {
+    position: relative;
+    min-height: 150vh;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 90% 10%;
+    grid-template-areas: "nav main" "footer footer";
+    gap: 5px;
+    padding-bottom: 50px; }
+
+.container_nav {
+  grid-area: nav;
+  padding: 1px; }
+  .container_nav .logo_ppal {
+    width: 90%; }
+    .container_nav .logo_ppal img {
+      width: 90%;
+      margin: 10px; }
+  .container_nav .container_navbar {
+    padding: 1px;
+    width: 100%; }
+    .container_nav .container_navbar li {
+      margin: 30px 0px 30px 20px;
+      list-style-type: none;
+      letter-spacing: 1.5px;
+      padding: 1px; }
+      .container_nav .container_navbar li a {
+        text-decoration: none; }
+        .container_nav .container_navbar li a:hover {
+          text-decoration: overline;
+          color: orangered; }
+        .container_nav .container_navbar li a:link {
+          color: #557088; }
+        .container_nav .container_navbar li a:visited {
+          text-decoration: none;
+          color: #557088; }
+  .container_nav .navbar_redes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: 50px;
+    padding: 1px; }
+    .container_nav .navbar_redes .icono_redes {
+      width: 30px;
+      margin: 2px; }
+  .container_nav .navbar_search {
+    margin-top: 30px !important; }
+
+.container_main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 25%;
+  grid-template-areas: "carrousel" "banner";
+  padding: 1px; }
+  .container_main .container_carrousel {
+    grid-area: carrousel; }
+  .container_main .container_banner {
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    grid-template-areas: "img_sobre suscrib";
+    padding: 1px; }
+    .container_main .container_banner .container_suscripcion_img {
+      grid-area: img_sobre;
+      margin-left: 10px;
+      margin-top: 10px;
+      text-align: center; }
+      .container_main .container_banner .container_suscripcion_img img {
+        width: 80%;
+        justify-content: center;
+        vertical-align: middle; }
+        .container_main .container_banner .container_suscripcion_img img:hover {
+          transform: rotate(-25deg); }
+    .container_main .container_banner .container_suscripcion {
+      grid-area: suscrib;
+      margin: 10px;
+      grid-area: suscrib;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+      .container_main .container_banner .container_suscripcion aside h3 {
+        font-size: 2.5rem;
+        font-family: "aye_myfont";
+        color: blueviolet; }
+      .container_main .container_banner .container_suscripcion aside p {
+        font-size: 1.5rem; }
+
+.container_footer {
+  grid-area: footer;
+  margin-top: 100px;
+  background-color: aquamarine;
+  height: 100px; }
+  .container_footer .footer {
+    height: 70px;
+    margin-top: 10px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+    .container_footer .footer h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: blueviolet; }
+    .container_footer .footer p {
+      font-size: 0.8rem; }
