@@ -60,3 +60,196 @@
      }
     
 }
+
+// ----SOBRE MI
+.container_main_about {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "container_about"
+    "container_stickers"
+    ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    .container_about {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        padding: 5px;
+        grid-area: container_about;
+ 
+        #about_img {
+            width: 30%;
+            border-radius: 100%;
+            margin-top: 40px;
+        }
+        .titulo_about {
+            font-size: 2rem;
+            font-family: "fuente_aye_doble";
+            color: rgba(137, 43, 226, 0.651);
+            margin-top: 20px;
+            font-style: bold;
+            &:hover {
+                font-size: 3rem;
+            }
+        }
+        .text_about {
+            color: rgb(85, 112, 136);
+            margin-top: 10px;
+        }
+    }
+    .container_stickers_about {
+        grid-area: container_stickers;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        img {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// ----PORTFOLIO
+.container_main_portfolio {
+    grid-area: main;
+    padding: 1px;
+    // display: grid;
+    // grid-template-rows: 1fr 2fr;
+    // grid-template-areas: 
+    // "icons"
+    // "exp";
+    .container_portfolio {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.5fr 2fr;
+        grid-template-areas: 
+        "icons"
+        "exp";
+
+        .container_porfolio_icons {
+            width: 100%;
+            height: 350px;
+            grid-area: icons;
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            justify-content: space-around;
+            .icon_portfolio-libros {
+                a {
+                    text-decoration: none;
+                    .img_portfolio {
+                        width: 200px;
+                        margin: 20px 20px 0px 20px;
+                        &:hover {
+                            width: 250px;
+                        }
+                    }
+                    .titulo_portfolio {
+                        font-size: 1rem;
+                        color: rgba(137, 43, 226, 0.651);
+                        letter-spacing: 2px;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    }
+                    &:hover {
+                        text-decoration: overline;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .icon_portfolio-retratos {
+                a {
+                    text-decoration: none;
+                .img_portfolio {
+                    width: 200px;
+                    margin: 20px 20px 5px 20px;
+                    &:hover {
+                        width: 250px;
+                    }
+                }
+                .titulo_portfolio {
+                    font-size: 1rem;
+                    color: rgba(137, 43, 226, 0.651);
+                    letter-spacing: 2px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                &:hover {
+                    text-decoration: overline;
+                    font-size: 0.8rem;
+                }
+            }
+            }
+            .icon_portfolio-stickers {
+                a {
+                    text-decoration: none;
+                 
+                }
+                .img_portfolio {
+                    width: 200px;
+                    margin: 20px 20px 5px 20px;
+                    &:hover {
+                        width: 250px;
+                    }
+                }
+                .titulo_portfolio {
+                    font-size: 1rem;
+                    color: rgba(137, 43, 226, 0.651);
+                    letter-spacing: 2px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                &:hover {
+                    text-decoration: overline;
+                    font-size: 0.8rem;
+                }   
+            }
+            }
+            .icon_portfolio-textil {
+                a {
+                    text-decoration: none;
+                
+                .img_portfolio {
+                    width: 200px;
+                    margin: 20px 20px 5px 20px;
+                    &:hover {
+                        width: 250px;
+                    }
+                }
+                .titulo_portfolio {
+                    font-size: 1rem;
+                    color: rgba(137, 43, 226, 0.651);
+                    letter-spacing: 2px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                &:hover {
+                    text-decoration: overline;
+                    font-size: 0.8rem;
+                }
+            }
+            }            
+        }
+        .container_portfolio-exp {
+            grid-area: exp;
+            display: flex;
+            padding: 10px;
+            text-align: center;
+            flex-direction: column;
+
+            .container_portfolio-prod {
+                width: 100%;
+                margin-bottom: 20px;
+                .titulo_portfolio-exp {
+                    font-size: 1rem;
+                    color: rgba(137, 43, 226, 0.651);
+                    letter-spacing: 2px;
+                    margin-top: 30px;
+                }
+                .imagenes_proyectos {
+                    width: 250px;
+                    margin: 10px;
+                }
+            }
+        }
+    }

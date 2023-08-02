@@ -56,6 +56,12 @@ body {
       margin: 2px; }
   .container_nav .navbar_search {
     margin-top: 30px !important; }
+    .container_nav .navbar_search .btn {
+      color: orangered !important;
+      border: #331408 !important; }
+      .container_nav .navbar_search .btn:hover {
+        background-color: rgba(255, 68, 0, 0.615) !important;
+        color: azure !important; }
 
 .container_main {
   grid-area: main;
@@ -99,6 +105,138 @@ body {
         color: blueviolet; }
       .container_main .container_banner .container_suscripcion aside p {
         font-size: 1.5rem; }
+
+.container_main_about {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "container_about" "container_stickers";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  .container_main_about .container_about {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    grid-area: container_about; }
+    .container_main_about .container_about #about_img {
+      width: 30%;
+      border-radius: 100%;
+      margin-top: 40px; }
+    .container_main_about .container_about .titulo_about {
+      font-size: 2rem;
+      font-family: "fuente_aye_doble";
+      color: rgba(137, 43, 226, 0.651);
+      margin-top: 20px;
+      font-style: bold; }
+      .container_main_about .container_about .titulo_about:hover {
+        font-size: 3rem; }
+    .container_main_about .container_about .text_about {
+      color: #557088;
+      margin-top: 10px; }
+  .container_main_about .container_stickers_about {
+    grid-area: container_stickers;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px; }
+    .container_main_about .container_stickers_about img {
+      width: 50%;
+      margin-bottom: 10px; }
+
+.container_main_portfolio {
+  grid-area: main;
+  padding: 1px; }
+  .container_main_portfolio .container_portfolio {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 2fr;
+    grid-template-areas: "icons" "exp"; }
+    .container_main_portfolio .container_portfolio .container_porfolio_icons {
+      width: 100%;
+      height: 350px;
+      grid-area: icons;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      justify-content: space-around; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-libros a {
+        text-decoration: none; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-libros a .img_portfolio {
+          width: 200px;
+          margin: 20px 20px 0px 20px; }
+          .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-libros a .img_portfolio:hover {
+            width: 250px; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-libros a .titulo_portfolio {
+          font-size: 1rem;
+          color: rgba(137, 43, 226, 0.651);
+          letter-spacing: 2px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-libros a:hover {
+          text-decoration: overline;
+          font-size: 0.8rem; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-retratos a {
+        text-decoration: none; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-retratos a .img_portfolio {
+          width: 200px;
+          margin: 20px 20px 5px 20px; }
+          .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-retratos a .img_portfolio:hover {
+            width: 250px; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-retratos a .titulo_portfolio {
+          font-size: 1rem;
+          color: rgba(137, 43, 226, 0.651);
+          letter-spacing: 2px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-retratos a:hover {
+          text-decoration: overline;
+          font-size: 0.8rem; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-stickers a {
+        text-decoration: none; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-stickers .img_portfolio {
+        width: 200px;
+        margin: 20px 20px 5px 20px; }
+        .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-stickers .img_portfolio:hover {
+          width: 250px; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-stickers .titulo_portfolio {
+        font-size: 1rem;
+        color: rgba(137, 43, 226, 0.651);
+        letter-spacing: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+      .container_main_portfolio .container_portfolio .container_porfolio_icons .icon_portfolio-stickers:hover {
+        text-decoration: overline;
+        font-size: 0.8rem; }
+    .container_main_portfolio .container_portfolio .icon_portfolio-textil a {
+      text-decoration: none; }
+      .container_main_portfolio .container_portfolio .icon_portfolio-textil a .img_portfolio {
+        width: 200px;
+        margin: 20px 20px 5px 20px; }
+        .container_main_portfolio .container_portfolio .icon_portfolio-textil a .img_portfolio:hover {
+          width: 250px; }
+      .container_main_portfolio .container_portfolio .icon_portfolio-textil a .titulo_portfolio {
+        font-size: 1rem;
+        color: rgba(137, 43, 226, 0.651);
+        letter-spacing: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+      .container_main_portfolio .container_portfolio .icon_portfolio-textil a:hover {
+        text-decoration: overline;
+        font-size: 0.8rem; }
+  .container_main_portfolio .container_portfolio-exp {
+    grid-area: exp;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column; }
+    .container_main_portfolio .container_portfolio-exp .container_portfolio-prod {
+      width: 100%;
+      margin-bottom: 20px; }
+      .container_main_portfolio .container_portfolio-exp .container_portfolio-prod .titulo_portfolio-exp {
+        font-size: 1rem;
+        color: rgba(137, 43, 226, 0.651);
+        letter-spacing: 2px;
+        margin-top: 30px; }
+      .container_main_portfolio .container_portfolio-exp .container_portfolio-prod .imagenes_proyectos {
+        width: 250px;
+        margin: 10px; }
 
 .container_footer {
   grid-area: footer;
