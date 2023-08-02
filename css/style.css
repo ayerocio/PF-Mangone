@@ -1,3 +1,20 @@
+@keyframes tienda-animacion {
+  0% {
+    left: 100%;
+    top: 0; }
+  25% {
+    left: 75%;
+    top: 0; }
+  50% {
+    left: 50%;
+    top: 0; }
+  75% {
+    left: 25%;
+    top: 0; }
+  100% {
+    left: 0%;
+    top: 0; } }
+
 @font-face {
   font-family: "fuente_aye_doble";
   src: url("../assets/fonts/ash_doble/AshDobleLinea-Regular.ttf"); }
@@ -237,6 +254,72 @@ body {
       .container_main_portfolio .container_portfolio-exp .container_portfolio-prod .imagenes_proyectos {
         width: 250px;
         margin: 10px; }
+
+.container_main-tienda {
+  grid-area: main; }
+  .container_main-tienda .container_tienda-animation {
+    width: 100%;
+    height: 200px; }
+    .container_main-tienda .container_tienda-animation #gif_tienda {
+      width: 200px;
+      justify-content: right;
+      animation-name: tienda-animacion;
+      animation-duration: 4s;
+      animation-delay: 1s;
+      position: relative;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; }
+  .container_main-tienda .container_tienda-prod {
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .container_main-tienda .container_tienda-prod .card {
+      align-items: center;
+      margin: 10px !important;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+      border: 1px solid rgba(137, 43, 226, 0.651) !important; }
+      .container_main-tienda .container_tienda-prod .card .card-title {
+        color: rgba(137, 43, 226, 0.651) !important; }
+      .container_main-tienda .container_tienda-prod .card .btn {
+        background-color: rgba(137, 43, 226, 0.651) !important;
+        border: 0 !important; }
+        .container_main-tienda .container_tienda-prod .card .btn:hover {
+          background-color: rgba(137, 43, 226, 0.249) !important;
+          color: black !important; }
+
+.container_main-contacto {
+  width: 100%;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-rows: 50%;
+  grid-template-areas: ".container_gracias container_form container_form";
+  justify-content: center; }
+  .container_main-contacto .container_gracias {
+    grid-area: container_gracias; }
+    .container_main-contacto .container_gracias img {
+      width: 400px;
+      margin-top: 40px; }
+  .container_main-contacto .container_form {
+    width: 80%;
+    margin-top: 40px;
+    grid-area: container_form;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; }
+  .container_main-contacto .contactame_text {
+    text-align: start !important;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(137, 43, 226, 0.651); }
+  .container_main-contacto .form_group {
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    color: #557088 !important; }
+    .container_main-contacto .form_group .contactame_boton {
+      text-align: justify !important; }
 
 .container_footer {
   grid-area: footer;
