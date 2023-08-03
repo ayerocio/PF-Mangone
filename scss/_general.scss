@@ -8,9 +8,9 @@
     src: url("../assets/fonts/myfont//Myfont1-Regular.otf");
 }
 
-// * {
-//     @include reset;
-// }
+* {
+     @include reset;
+ }
 
 body {
     height: 100%;
@@ -27,6 +27,26 @@ body {
             ;
             gap: 5px;
             padding-bottom: 50px;
+
+            @include mobile-min {
+                @include responsive-grid(1fr, auto, 0, "nav" "main" "footer");
+            }
+
+            
+            @include mobile {
+                @include responsive-grid(1fr, auto, 0, "nav" "main" "footer");
+
+            }
+
+            @include tablet {
+                @include responsive-grid(1fr, auto, 0, "nav" "main" "footer");
+
+            }
+
+            @include desktop {
+                @include responsive-grid(1fr, auto, 0, "nav" "main" "footer");
+
+            }
         }
 }
 

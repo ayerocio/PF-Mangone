@@ -5,3 +5,18 @@
     75% {left: 25%; top: 0;}
     100% {left: 0%; top: 0;}
 }
+
+// -BOOTSTRAP
+$primary: rgba(137, 43, 226, 0.651);
+$danger: #FE8F83;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+);
+
+// --
+$fuente-texto: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$fuente-titulo1: "fuente_aye_doble";
+$fuente-titulo2: "aye_myfont";
+$color-texto: rgb(85, 112, 136);
