@@ -3,21 +3,21 @@
     padding: 1px;
     .logo_ppal {
         width: 90%;
-        @include mobile-min {
-            @include logo-responsive(40%, 0%);
-        }      
-        @include mobile {
-            @include logo-responsive(40%, 0%);
-        }
-        @include tablet {
-            @include logo-responsive(40%, 0%);
-        }
-        @include desktop {
-            @include logo-responsive(40%, 0%);
-        }
         img {
             width: 90%;
             margin: 10px;
+            @include mobile-min {
+                @include logo-responsive(40%, 0%);
+            }      
+            @include mobile {
+                @include logo-responsive(40%, 0%);
+            }
+            @include tablet {
+                @include logo-responsive(30%, 0%);
+            }
+            @include desktop {
+                @include logo-responsive(30%, 0%);
+            }
         }
     }
     .container_navbar {
@@ -26,13 +26,17 @@
         ul {
             @include mobile-min {
                 display:flex;
-                justify-content: space-evenly;
+                justify-content: space-around;
             }
             @include mobile {
                 display:flex;
                 justify-content: space-evenly;
             }
             @include tablet {
+                display:flex;
+                justify-content: space-evenly;
+            }
+            @include desktop {
                 display:flex;
                 justify-content: space-evenly;
             }
@@ -77,16 +81,16 @@
             margin-top: 50px;
             padding: 1px;
             @include mobile-min {
-                margin-top: 5px;
+                display: none;
             }      
             @include mobile {
-                margin-top: 5px;
+                display: none;
             }
             @include tablet {
-                margin-top: 5px;
+                display: none;
             }
             @include desktop {
-                margin-top: 5px;
+                display: none;
             }
             .icono_redes {
                 width: 30px;
@@ -96,6 +100,18 @@
 
         .navbar_search {
             margin-top: 30px !important;
+            @include mobile-min {
+                display: none;
+            }      
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: none;
+            }
             .btn {
             &:hover {
             background-color: $danger !important;

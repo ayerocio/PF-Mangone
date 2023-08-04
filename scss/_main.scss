@@ -10,20 +10,29 @@
     ;
     padding: 1px;
     @include mobile-min {
-        @include responsive-grid(1fr, auto, 0, "carrousel" "banner");
+        @include responsive-grid(1fr, 0.6fr 0.5fr, 0, "carrousel" "banner");
     }
     @include mobile {
-        @include responsive-grid(1fr, auto, 0,"carrousel" "banner");
+        @include responsive-grid(1fr, 0.6fr 0.5fr, 0,"carrousel" "banner");
 
     }
     @include tablet {
-        @include responsive-grid(1fr, auto, 0,"carrousel" "banner");
+        @include responsive-grid(1fr, 0.6fr 0.5fr, 0,"carrousel" "banner");
     }
     @include desktop {
-        @include responsive-grid(1fr, auto, 0,"carrousel" "banner");
+        @include responsive-grid(1fr, 0.6fr 0.5fr, 0,"carrousel" "banner");
     }
     .container_carrousel {
         grid-area: carrousel; 
+        @include mobile-min {
+            margin: 10px 0px 20px 0px !important;
+            height: 50%;
+        }
+        @include mobile {
+            margin: 10px 0px 20px 0px !important;
+            height: 50%;
+    
+        }
     }
     .container_banner {
         grid-area: banner;
@@ -34,18 +43,42 @@
         "img_sobre suscrib"
         ;
         padding: 1px;
+        @include mobile-min {
+            @include responsive-grid(1fr, 0.3fr 0.4fr, 0, "carrousel" "banner");
+        }
+        @include mobile {
+            @include responsive-grid(1fr, 0.3fr 0.4fr, 0,"img_sobre" "suscrib");
+        }
+        @include tablet {
+            @include responsive-grid(1fr, 0.3fr 0.4fr, 0,"img_sobre" "suscrib");
+        }
+        @include desktop {
+            @include responsive-grid(1fr, 0.3fr 0.4fr, 0,"img_sobre" "suscrib");
+        }
         .container_suscripcion_img {
         grid-area: img_sobre;
         margin-left: 10px;
         margin-top: 10px;
         text-align: center;
             img {
-                width: 80%;
+                width: 85%;
                 justify-content: center;
                 vertical-align: middle;
 
                 &:hover {
                     transform: rotate(-25deg);
+                }
+                @include mobile-min {
+                    width: 50%;
+                }
+                @include mobile {
+                    width: 50%;
+                }
+                @include tablet {
+                    width: 30%;
+                }
+                @include desktop {
+                    width: 30%;
                 }
             }  
         }
@@ -69,19 +102,6 @@
                     font-size: 1rem;
                 }
             }
-        }
-        @include mobile-min {
-            @include responsive-grid(1fr, 1fr 1fr, 0, "img_sobre suscrib");
-        }
-        @include mobile {
-            @include responsive-grid(1fr, auto, 0,"img_sobre suscrib");
-    
-        }
-        @include tablet {
-            @include responsive-grid(1fr, auto, 0,"img_sobre suscrib");
-        }
-        @include desktop {
-            @include responsive-grid(1fr, auto, 0,"img_sobre suscrib");
         }
      }
     
@@ -155,15 +175,49 @@
         grid-template-areas: 
         "icons"
         "exp";
+        @include mobile-min {
+            grid-template-rows: 0.1fr 1fr;
+        }
+        
+        @include mobile {
+            grid-template-rows: 0.1fr 1fr;
+        }
+        @include tablet {
+            grid-template-rows: 0.1fr 1fr;
+        }
+        
+        @include desktop {
+            grid-template-rows: 0.1fr 1fr;
+        }
+        
 
         .container_porfolio_icons {
             width: 100%;
-            height: 300px;
+            // height: 300px;
             grid-area: icons;
             display: flex;
             text-align: center;
             flex-direction: row;
             justify-content: space-around;
+            @include mobile-min {
+                flex-direction: column;
+                height: 550px;
+            }
+            
+            @include mobile {
+                flex-direction: column;
+                height: 550px;
+                
+            }
+            
+            @include tablet {
+                flex-direction: column;
+                
+            }
+            
+            @include desktop {
+                height: 160px;
+            }
             .icon_portfolio {
                 a {
                     text-decoration: none;
@@ -173,16 +227,61 @@
                         &:hover {
                             width: 250px;
                         }
+                        @include mobile-min {
+                            width: 100px;
+                            margin: 5px 5px 0px 5px;
+                        &:hover {
+                            width: 120px;
+                        }
+                        }
+                        
+                        @include mobile {
+                            width: 100px;
+                            margin: 5px 5px 0px 5px;
+                            &:hover {
+                            width: 120px;
+                        } 
+                        }
+                        
+                        @include tablet {
+                            width: 100px;
+                            margin: 10px 10px 0px 10px;
+                            &:hover {
+                            width: 120px;
+                        }
+                        }
+                        
+                        @include desktop {
+                            width: 100px;
+                            margin: 10px 10px 0px 10px;
+                            &:hover {
+                            width: 120px;
+                        }
+                        }
                     }
                     .titulo_portfolio {
-                        font-size: 1.7rem;
+                        font-size: 1.6rem;
                         color: $primary;
                         letter-spacing: 2px;
                         font-family: $fuente-titulo2;
+                        @include mobile-min {
+                            font-size: 1rem;
+                        }
+                        
+                        @include mobile {
+                            font-size: 1rem;
+                        }
+                        
+                        @include tablet {
+                            font-size: 1.3rem;
+                        }
+                        
+                        @include desktop {
+                            font-size: 1.5rem;
+                        }
                     }
                     &:hover {
                         text-decoration: overline;
-                        font-size: 1.1rem;
                         color: $danger;
                     }
                 }
@@ -206,10 +305,44 @@
                     color: $primary;
                     letter-spacing: 2px;
                     margin-top: 30px;
+                    @include mobile-min {
+                        font-size: 0.8rem;
+                    }
+                    
+                    @include mobile {
+                        font-size: 0.8rem;
+                    }
+                    
+                    @include tablet {
+                        font-size: 1rem;
+                    }
+                    
+                    @include desktop {
+                        font-size: 1.3rem;
+                    }
                 }
                 .imagenes_proyectos {
                     width: 250px;
                     margin: 10px;
+                    @include mobile-min {
+                        width: 150px;
+                        margin: 5px;
+                    }
+                    
+                    @include mobile {
+                        width: 150px;
+                        margin: 5px;
+                    }
+                    
+                    @include tablet {
+                        width: 150px;
+                        margin: 5px;
+                    }
+                    
+                    @include desktop {
+                        width: 150px;
+                        margin: 5px;
+                    }
                 }
             }
         }
@@ -271,12 +404,63 @@
     grid-template-areas: 
     ".container_gracias container_form container_form";
     justify-content: center;
+    @include mobile-min {
+        @include responsive-grid(1fr, 0.3fr 1fr, 10, "container_gracias" "container_form");
+    }
+    @include mobile {
+        @include responsive-grid(1fr, 0.3fr 1fr, 10,"container_gracias" "container_form");
+    }
+    @include tablet {
+        @include responsive-grid(0.5fr 1fr,1fr, 10,"container_gracias container_form");
+    }
+    @include desktop {
+        @include responsive-grid(1fr, auto, 0,"container_gracias" "container_form");
+    }
     .container_gracias {
         grid-area: container_gracias;
+        @include mobile-min {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+         }
+         @include mobile {
+            height:200px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+          }
+          @include tablet {
+            height:200px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+          }
+          @include desktop {
+            height:200px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+          }
         img {
             width: 400px;
             margin-top: 50px;
-
+            @include mobile-min {
+                width: 150px;
+                margin: 0px auto;
+             }
+             @include mobile {
+                 width: 200px;
+                 margin: 0px auto;
+              }
+              @include tablet {
+                 width: 200px;
+                 margin: 0px auto;
+              }
+              @include desktop {
+                 width: 200px;
+                 margin: 0px auto;
+              }
         }
     }
     .container_form {
@@ -285,12 +469,57 @@
         grid-area: container_form;
         text-align: center;
         font-family: $fuente-texto !important;
+        .form_field {
+            @include mobile-min {
+            width: 70%;
+            margin: 30px;
+            justify-content: center !important;
+        }
+        @include mobile {
+            width: 90%;
+            justify-content: center !important;
+            margin: 20px;
+        }
+        @include tablet {
+            width: 90%;
+            margin: 50px;
+            justify-content: center !important;
+         }
+         @include desktop {
+            width: 90%;
+            margin: 50px;
+            justify-content: center !important;
+         }
+        }
+        
+        .box_form {
+            @include mobile-min {
+                justify-content: center !important;
+            }
+            @include mobile {
+                justify-content: center !important;
+            }
+            @include tablet {
+                width: 90%;
+                margin-top: 60px;
+                margin-right: 50px;
+             }
+        }
          }
         .contactame_text {
             text-align: start !important;
             font-size: 3.5rem;
             font-family: $fuente-titulo1;
             color: $primary;
+            @include mobile-min {
+                font-size: 2rem;
+            }
+            @include mobile {
+                font-size: 2rem;
+            }
+            @include tablet {
+                font-size: 2rem;
+             }
         }
 
         .form_group {
